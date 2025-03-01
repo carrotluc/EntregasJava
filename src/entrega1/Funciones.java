@@ -87,7 +87,7 @@ public class Funciones {
         return s;
     }
 	
-	//APARTADO DE LOS TEST DE CADA FUNCIÓN
+	//TestFunciones.java
 	public static void main(String[] args) {
 		System.out.println(serie(4, 2));
 		System.out.println(Funcion2(3., 5., 2.));

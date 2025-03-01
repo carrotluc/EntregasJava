@@ -69,6 +69,7 @@ public class Lecturas {
 		return s;
 	}
 		
+	//TestLecturas.java
 	public static void main(String[] args) {
 		System.out.println(sumaElementosFichero("resources/lin_quijote.txt", " ", "Quijote"));
 		System.out.println(sumaLineasFichero("resources/lin_quijote.txt", "quijote"));
