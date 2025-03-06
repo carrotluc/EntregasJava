@@ -1,4 +1,3 @@
-
 package entrega1;
 
 import java.util.List;
@@ -15,7 +14,7 @@ public class Lecturas {
 		List<String> lineas = File2.lineasDeFichero(fichero);
 		String cadl = cad.toLowerCase();
 		for (String linea : lineas) {
-			String[] t = linea.split(sep); //El corchete es para que lo trate como un conjunto de caracteres
+			String[] t = linea.split(sep); 
 			for (String t2 : t) {
 				if (t2.toLowerCase().equals(cadl)) {
 					c++;
@@ -57,14 +56,14 @@ public class Lecturas {
 	//FUNCIÓN 9
 	public static String longitudMediaLineas(String fichero, String sep) {
 		List<String> lineas = File2.lineasDeFichero(fichero);
-		Integer t = 0;
+		Double t = 0.0;
 		Integer n = lineas.size();
 
 		for (String linea : lineas) {
 			String[] palabras = linea.split(sep);
 			t += palabras.length;
 		}
-		Double m = (double) t/n; //Se hace la conversión a double para que no haga una división entera
+		Double m = t/n; 
 		String s = String.format("La longitud media de las líneas del fichero es %.1f", m);
 		return s;
 	}

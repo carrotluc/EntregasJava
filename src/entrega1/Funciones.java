@@ -16,7 +16,7 @@ public class Funciones {
 	}
 
 	//FUNCIÓN 2
-	public static String Funcion2(Double a1, Double r, Double k) {
+	public static String secuenciaGeometrica(Double a1, Double r, Double k) {
 		Double s = a1;
         for (int i = 1; i < k; i++) {
         Double p = Math.pow(r, i);
@@ -55,7 +55,7 @@ public class Funciones {
 		return s;
 	}
 	
-	public static String Funcion4(Double n, Double k) {
+	public static String numeroS(Double n, Double k) {
 		assert k > 0 : "¡OJO! K debe ser mayor que 0";
 		assert n > 0 : "¡OJO! N debe ser mayor que 0";
 		assert n >= k : "¡OJO! N debe ser mayor que k";
@@ -90,9 +90,9 @@ public class Funciones {
 	//TestFunciones.java
 	public static void main(String[] args) {
 		System.out.println(serie(4, 2));
-		System.out.println(Funcion2(3., 5., 2.));
+		System.out.println(secuenciaGeometrica(3., 5., 2.));
 		System.out.println(numeroCombinatorio(4, 2));
-		System.out.println(Funcion4(4., 2.));
+		System.out.println(numeroS(4., 2.));
 		System.out.println(newtonMetodo(3., 0.001));
 	}
 }
