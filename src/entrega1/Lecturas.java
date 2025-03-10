@@ -1,11 +1,12 @@
 package entrega1;
 
 import java.util.List;
+
 import java.util.Set;
 import java.util.HashSet;
 import java.util.ArrayList;
-import tools.File2;
-
+//import tools.File2;
+import us.lsi.tools.File2;
 public class Lecturas {
 	
 	// FUNCIÓN 6
