@@ -75,5 +75,6 @@ public class Lecturas {
 		System.out.println(sumaLineasFichero("resources/lin_quijote.txt", "quijote"));
 		System.out.println(palabrasUnicas("resources/archivo_palabras.txt"));
 		System.out.println(longitudMediaLineas("resources/palabras_random.csv", ","));
+		System.out.println("1" + "2" + '3');
 	}
 }
