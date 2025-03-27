@@ -2,7 +2,8 @@ package entrega2.tipos;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.ArrayList;
+//import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class ColaPrioridad<E, P extends Comparable<P>> extends Cola<PriorityElement<E, P>> {
 	public ColaPrioridad() {
@@ -23,11 +24,8 @@ public class ColaPrioridad<E, P extends Comparable<P>> extends Cola<PriorityElem
 	}
 
 	public List<E> valuesAsList() {
-		List<E> values = new ArrayList<>();
-		for (PriorityElement<E, P> element : elementos) {
-			values.add(element.value());
-		}
-		return values;
+		return elementos.stream().sorted(Comparator.comparing(PriorityElement::priority)).map(PriorityElement::value)
+				.collect(Collectors.toList());
 	}
 
 	public void decreasePriority(E value, P newPriority) {
@@ -42,7 +40,12 @@ public class ColaPrioridad<E, P extends Comparable<P>> extends Cola<PriorityElem
 
 	public E removeValue() {
 		PriorityElement<E, P> element = remove();
-		return element != null ? element.value() : null;
+		if (element != null) {
+			return element.value();
+		} else {
+			throw new IllegalStateException("La cola está vacía");
+		}
+
 	}
 
 	public void addAllValues(List<E> values, P priority) {

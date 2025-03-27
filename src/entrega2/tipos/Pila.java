@@ -12,8 +12,8 @@ public class Pila<E> extends AgregadoLineal<E> {
 	
 	public E top() {
 		if (elementos.isEmpty()) {
-			return elementos.get(0);
+			throw new IllegalStateException("La pila está vacía");
 		}
-		return null;
+		return elementos.get(elementos.size() - 1);
     }
 }
