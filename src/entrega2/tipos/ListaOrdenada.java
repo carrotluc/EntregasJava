@@ -1,6 +1,8 @@
 package entrega2.tipos;
 
 import java.util.Comparator;
+//import java.util.List;
+import java.util.stream.Stream;
 
 public class ListaOrdenada<E> extends AgregadoLineal<E> {
 	private Comparator<E> comparator;
@@ -26,5 +28,9 @@ public class ListaOrdenada<E> extends AgregadoLineal<E> {
 		int index = indexOrder(e);
         elementos.add(index, e);
 	}
+	
+	public Stream<E> stream() {
+        return elementos.stream();
+    }
 
 }

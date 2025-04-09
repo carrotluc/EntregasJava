@@ -1,5 +1,7 @@
 package entrega2.tipos;
 
+import java.util.stream.Stream;
+
 public class Cola<E> extends AgregadoLineal<E> {
 	public Cola() {
 		super();
@@ -14,4 +16,7 @@ public class Cola<E> extends AgregadoLineal<E> {
 		elementos.add(e);
 	}
 
+	public Stream<E> stream() {
+		return elementos.stream();
+	}
 }

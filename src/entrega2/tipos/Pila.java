@@ -1,5 +1,7 @@
 package entrega2.tipos;
 
+import java.util.stream.Stream;
+
 public class Pila<E> extends AgregadoLineal<E> {
 	public Pila() {
         super();
@@ -16,4 +18,8 @@ public class Pila<E> extends AgregadoLineal<E> {
 		}
 		return elementos.get(elementos.size() - 1);
     }
+
+	public Stream<E> stream() {
+		return elementos.stream();
+	}
 }
