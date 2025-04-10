@@ -19,6 +19,7 @@ public class Pila<E> extends AgregadoLineal<E> {
 		return elementos.get(elementos.size() - 1);
     }
 
+	//Ensayo (bloque2.ensayo)
 	public Stream<E> stream() {
 		return elementos.stream();
 	}

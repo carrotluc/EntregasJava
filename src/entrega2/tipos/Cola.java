@@ -16,6 +16,7 @@ public class Cola<E> extends AgregadoLineal<E> {
 		elementos.add(e);
 	}
 
+	//Ensayo (bloque2.ensayo)
 	public Stream<E> stream() {
 		return elementos.stream();
 	}

@@ -29,6 +29,7 @@ public class ListaOrdenada<E> extends AgregadoLineal<E> {
         elementos.add(index, e);
 	}
 	
+	//Ensayo (bloque2.ensayo)
 	public Stream<E> stream() {
         return elementos.stream();
     }

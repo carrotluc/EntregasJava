@@ -6,7 +6,6 @@ public class Test {
 	public static void main(String[] args) {
 		System.out.println("===== INICIANDO PRUEBAS DE ESTRUCTURAS LINEALES =====");
 
-		// ----- Prueba de ListaOrdenada -----
 		System.out.println("\n----- Prueba de ListaOrdenada -----");
 		ListaOrdenada<Integer> listaOrdenada = ListaOrdenada.of(Comparator.<Integer>naturalOrder());
 		System.out.println("Añadiendo elementos: 5, 2, 8, 1, 3");
@@ -25,13 +24,11 @@ public class Test {
 		System.out.println("Eliminando todos los elementos: " + listaOrdenada.removeAll());
 		System.out.println("¿Está vacía? " + listaOrdenada.isEmpty());
 
-		// Prueba con strings
 		System.out.println("\nPrueba con strings:");
 		ListaOrdenada<String> listaOrdenadaStrings = ListaOrdenada.of(Comparator.<String>naturalOrder());
 		listaOrdenadaStrings.addAll(Arrays.asList("apple", "banana", "cherry", "date"));
 		System.out.println("Elementos ordenados: " + listaOrdenadaStrings.elements());
 
-		// ----- Prueba de ListaOrdenadaSinRepeticion -----
 		System.out.println("\n----- Prueba de ListaOrdenadaSinRepeticion -----");
 		ListaOrdenadaSinRepeticion<Integer> listaSinRepeticion = ListaOrdenadaSinRepeticion
 				.of(Comparator.<Integer>naturalOrder());
@@ -47,7 +44,6 @@ public class Test {
 		System.out.println("Elementos después de añadir lote: " + listaSinRepeticion.elements());
 		System.out.println("Se espera que el 4 aparezca solo una vez");
 
-		// ----- Prueba de Cola (FIFO) -----
 		System.out.println("\n----- Prueba de Cola (FIFO) -----");
 		Cola<String> cola = Cola.of();
 		System.out.println("Añadiendo elementos: 'primero', 'segundo', 'tercero'");
@@ -69,7 +65,6 @@ public class Test {
 					"Excepción correctamente lanzada al intentar desencolar de una cola vacía: " + e.getMessage());
 		}
 
-		// ----- Prueba de Pila (LIFO) -----
 		System.out.println("\n----- Prueba de Pila (LIFO) -----");
 		Pila<Double> pila = new Pila<>();
 		System.out.println("Añadiendo elementos: 1.1, 2.2, 3.3");
@@ -92,7 +87,6 @@ public class Test {
 					"Excepción correctamente lanzada al intentar acceder al tope de una pila vacía: " + e.getMessage());
 		}
 
-		// ----- Prueba de ColaPrioridad -----
 		System.out.println("\n----- Prueba de ColaPrioridad -----");
 		ColaPrioridad<String, Integer> colaPrioridad = ColaPrioridad.ofPriority();
 		System.out.println("Añadiendo elementos con prioridad:");
@@ -123,7 +117,6 @@ public class Test {
 					"Excepción correctamente lanzada al intentar desencolar de una cola vacía: " + e.getMessage());
 		}
 
-		// Prueba con addAll
 		System.out.println("\nPrueba con addAll:");
 		colaPrioridad.addAllValues(Arrays.asList("Tarea A", "Tarea B", "Tarea C"), 2);
 		System.out.println("Elementos añadidos en lote con prioridad 2: " + colaPrioridad.valuesAsList());
