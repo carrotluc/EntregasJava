@@ -32,5 +32,6 @@ public class ListaOrdenada<E> extends AgregadoLineal<E> {
 	public Stream<E> stream() {
         return elementos.stream();
     }
+	
 
 }
